@@ -1,0 +1,44 @@
+PS C:\Users\Cleidson\Documents\GitHub\CursoAPIComPHP> composer init
+
+
+  Welcome to the Composer config generator  
+
+
+
+This command will guide you through creating your composer.json config.
+
+Package name (<vendor>/<name>) [cleidson/curso-api-com-php]:
+Description []: curso php com laravel, composer, para criar api  
+Author [cleidson-cmd <cleidson.santana@unidompedro.com>, n to skip]: Cleidson santana
+Minimum Stability []: 
+Package Type (e.g. library, project, metapackage, composer-plugin) []: 
+License []: 
+
+Define your dependencies.
+
+Would you like to define your dependencies (require) interactively [yes]? no
+Would you like to define your dev dependencies (require-dev) interactively [yes]? no
+Add PSR-4 autoload mapping? Maps namespace "Cleidson\CursoApiComPhp" to the entered relative path. [src/, n to skip]:   
+ 
+{
+    "name": "cleidson/curso-api-com-php",
+    "description": "curso php com laravel, composer, para criar api",
+    "autoload": {
+        "psr-4": {
+            "Cleidson\\CursoApiComPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Cleidson santana"
+        }
+    ],
+    "require": {}
+}
+
+Do you confirm generation [yes]? yes
+Generating autoload files
+Generated autoload files
+PSR-4 autoloading configured. Use "namespace Cleidson\CursoApiComPhp;" in src/
+Include the Composer autoloader with: require 'vendor/autoload.php';
+PS C:\Users\Cleidson\Documents\GitHub\CursoAPIComPHP>

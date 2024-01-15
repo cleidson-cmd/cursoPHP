@@ -1,0 +1,17 @@
+{
+    "name": "cleidson/curso-api-com-php",
+    "description": "curso php com laravel, composer, para criar api",
+    "autoload": {
+        "psr-4": {
+            "Cleidson\\CursoApiComPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Cleidson santana"
+        }
+    ],
+    "require": {
+        "league/climate": "^3.8"
+    }
+}
