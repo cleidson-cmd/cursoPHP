@@ -1,3 +1,5 @@
+php -S localhost:8000  > startar o servidor php
+
 PS C:\Users\Cleidson\Documents\GitHub\CursoAPIComPHP> composer init
 
 
