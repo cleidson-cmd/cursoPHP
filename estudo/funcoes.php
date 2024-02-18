@@ -25,3 +25,21 @@ function calcularAumento($salario): int
         return $salario * 0.05;
     }
 }
+
+//medir a profundidade de um array
+function listaArray(array $array){
+    if (!is_null($array)){
+        foreach ($array as $item){
+
+            if (!is_array($item)){
+                //não é um array
+                echo  $item . PHP_EOL;
+
+            }else{
+                //se for um array eu chamo a mesma função para varrer a sublista 
+                //isso chama recursão chamo a mesma função dentro dela mesma 
+                listaArray($item);
+            }
+        }
+    }
+}
