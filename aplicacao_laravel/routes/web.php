@@ -15,16 +15,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 //acessando o metodo hello na classe HelloController
-Route::get('/',[HelloController::class, "hello"] );
+Route::get('/veiculos/{id}',[HelloController::class, "visualizarVeiculo"] );
+Route::get('/veiculos',[HelloController::class, "listarVeiculos"] );
+
+Route::get('/{nome}',[HelloController::class, "hello"] );
+
+Route::get('/{nome}/{valor}',[HelloController::class, "criacao"] );
+
+Route::get('/{id}/{nome}/{valor}',[HelloController::class, "atualizacao"] );
+
+
 
 
 /* Route::get('/', function () {
     return view('welcome');
 }); */
 
-/* //o php ler sempre de cima para baixo nesse caso a prinmeira 
-//rota que atender a condição passada ele entra 
-Route::get('/hello/{nome}', function ($nome) {  
+/* //o php ler sempre de cima para baixo nesse caso a prinmeira
+//rota que atender a condição passada ele entra
+Route::get('/hello/{nome}', function ($nome) {
     $nomes = ['nome1','nome2','nome3','nome4','nome5',];
       //dd(compact("nome", "nomes"));
 

@@ -18,7 +18,7 @@
 
                 <ul class="list-group">
                     @foreach($veiculos as $vei)
-                    <li class="list-group-item">{{ $vei }}</li>
+                    <li class="list-group-item">O veiculo: <a href="/veiculos/{{$vei->id}}">{{ $vei->nome }}</a>, - Custa: {{ $vei->valor }}.</li>
                     @endforeach
                 </ul>
             </div>

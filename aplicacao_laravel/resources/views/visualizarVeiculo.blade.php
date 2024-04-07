@@ -14,12 +14,12 @@
         <dvi class="row">
             <div class="col-12">
                 <h1>Bem vindo ao meu site😊</h1>
-                <h2>Olá, {{ $nome }}!</h2>
-
+                <h2>Detalhe do veiculo</h2>
                 <ul class="list-group">
-                    @foreach($veiculos as $vei)
-                    <li class="list-group-item">{{ $vei }}</li>
-                    @endforeach
+                    <li class="list-group-item">Nome: {{ $veiculo->nome }}</li>
+                    <li class="list-group-item">Valor: {{ $veiculo->valor }}</li>
+                    <li class="list-group-item">cadastrado: {{ $veiculo->created_at }}</li>
+
                 </ul>
             </div>
 
