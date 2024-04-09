@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HelloController;
+use App\Http\Controllers\VeiculoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 //acessando o metodo hello na classe HelloController
+Route::get('/index',[VeiculoController::class, "index"] );
+
+Route::get('/show/{id}',[VeiculoController::class, "show"] );
+
 Route::get('/veiculos/{id}',[HelloController::class, "visualizarVeiculo"] );
+
 Route::get('/veiculos',[HelloController::class, "listarVeiculos"] );
 
 Route::get('/{nome}',[HelloController::class, "hello"] );
