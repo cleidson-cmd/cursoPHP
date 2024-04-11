@@ -44,3 +44,18 @@ por padrão o apache ler arquivos .htm, .hml, .html
 se ele não encontrar isso ele lista os arquivos no diretorio.
 para resolver por criar um arquivo .html vazio 
 para ele carregar direto ou configurar o apache
+
+
+criar classe request para validação de dados
+php artisan make:request VeiculoStoreRequest
+
+criando de uma vez model, controller e migration com -crm
+php artisan make:model cliente -crm
+
+criando uma estrutura basica completa com cliente: model , controller ja recebendo cliente como parametro, factory, etc..
+php artisan make:model cliente -a
+
+
+
+criando resourse
+php artisan make:resource VeiculoResource

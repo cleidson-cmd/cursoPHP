@@ -14,11 +14,20 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//essa rota ja cria todas possibilidades com esse /veiculos podendo excluir as rotas a baixo desde que tenham o memso nome
+//tendo como diferença o verbo : get, post, etc.. e parametros
+route::apiResource("/veiculos", VeiculoController::class);
 
 //acessando o metodo hello na classe HelloController
 Route::get('/index',[VeiculoController::class, "index"] );
 
 Route::get('/show/{id}',[VeiculoController::class, "show"] );
+
+Route::get('/store',[VeiculoController::class, "store"] );//post
+
+Route::get('/update/{id}',[VeiculoController::class, "update"] );
+
+Route::get('/destroy/{id}',[VeiculoController::class, "destroy"] );
 
 Route::get('/veiculos/{id}',[HelloController::class, "visualizarVeiculo"] );
 
