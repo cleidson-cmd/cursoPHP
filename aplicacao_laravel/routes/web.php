@@ -19,6 +19,12 @@ use Illuminate\Support\Facades\Route;
 route::apiResource("/veiculos", VeiculoController::class);
 
 //acessando o metodo hello na classe HelloController
+Route::get('/cadastrarCliente',[VeiculoController::class, "cadastrarCliente"] );
+
+Route::get('/municipios',[VeiculoController::class, "municipios"] );
+
+Route::get('/collection',[VeiculoController::class, "aprendendoCollection"] );
+
 Route::get('/index',[VeiculoController::class, "index"] );
 
 Route::get('/show/{id}',[VeiculoController::class, "show"] );
