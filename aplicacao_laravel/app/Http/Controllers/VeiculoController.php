@@ -76,22 +76,30 @@ class VeiculoController extends Controller
 
 
 
-    public function aprendendoCollection()
+    public function aprendendoCollection(Request $request)
     {
-        $lista = [
-            ["nome" => "cleidson", "idade" => 18],
-            ["nome" => "gabriel", "idade" => 8],
-            ["nome" => "alex", "idade" => 15],
-            ["nome" => "bruno", "idade" => 20],
-        ];
+
+        $pessoas = collect([
+            ["nome" => "cleidson", "idade" => 18, "sexo" => "M"],
+            ["nome" => "gabriela", "idade" => 8], "sexo" => "F",
+            ["nome" => "alex", "idade" => 15, "sexo" => "M"],
+            ["nome" => "bruna", "idade" => 20, "sexo" => "F"],
+        ]);
+        $queryParam = $request->only(['nome', 'idade', 'sexo']);
+
+        foreach ($queryParam as $chave => $valor) {
+            if ($request->has($chave)) {
+                $pessoas = $pessoas->where($chave, '=', $valor);
+            }
+        }
         //filtrar lista
-        $lista = array_filter($lista, function ($item) {
+        /*  $pessoas = array_filter($pessoas, function ($item) {
             //retorna um buleano true adciona; false não adciona
             return $item["idade"] > 15;
-        });
+        }); */
         //return $lista->sortBy("idade");ordena   por uma chave
         //return $lista->pluck("nome");retorna apenas os valores da chave nome
-        return $lista;
+        return $pessoas;
     }
 
     public function municipios(Request $request)

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Veiculo extends Model
 {
@@ -28,4 +29,11 @@ class Veiculo extends Model
         //pegando o atributo, tratando antes de retornar. nesse caso transformando em maiusculo
         return strtoupper($this->attributes['nome']);
     }
+
+    public function fabricante(){
+        //relacionando a um fabricante
+       return $this->belongsTo(Fabricante::class);
+    }
+
+
 }
