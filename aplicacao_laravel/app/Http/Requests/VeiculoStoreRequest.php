@@ -28,7 +28,7 @@ class VeiculoStoreRequest extends FormRequest
         return [
             "nome" => "required",
             "cor" => "required",
-            "fabricante" => "required|min:5",
+            //"fabricante_id" => "required|min:5",
             "ano_fabricacao" => "required",
             "ano_modelo" => "required",
             "placa" => "required|unique:veiculos,placa",//essa validação deve informar o nome da tabela no banco e o compo ela no banco deve estar como unique tambem ex: unique:tabela,campo
@@ -43,8 +43,8 @@ class VeiculoStoreRequest extends FormRequest
         return [
             "nome.required" => "required",
             "cor.required" => "nome é obrigatório",
-            "fabricante.required" => "fabricante é obrigatório",
-            "fabricante.min" => "fabricante deve ter 5 digitos no minimo",
+            //"fabricante.required" => "fabricante é obrigatório",
+            //"fabricante.min" => "fabricante deve ter 5 digitos no minimo",
             "ano_fabricacao.required" => "ano_fabricacao é obrigatório",
             "ano_modelo.required" => "ano_modelo é obrigatório",
             "placa.required" => "placa é obrigatório",

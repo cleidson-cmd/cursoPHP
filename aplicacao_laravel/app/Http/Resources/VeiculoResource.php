@@ -21,7 +21,7 @@ class VeiculoResource extends JsonResource
         return [
             "nome" => $this->nome,
             "cor" => $this->cor,
-            "fabricante" => $this->fabricante->nome,
+            "fabricante_id" => $this->fabricante->id,
             "preco" => "R$". number_format($this->preco, 2,",","."),
         ];
     }

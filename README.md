@@ -59,3 +59,10 @@ php artisan make:model cliente -a
 
 criando resourse
 php artisan make:resource VeiculoResource
+
+
+criar testes:
+php artisan make:test VeiculoControllerTest
+para rodar os testes
+php artisan test
+

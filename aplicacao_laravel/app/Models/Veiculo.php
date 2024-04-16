@@ -14,7 +14,7 @@ class Veiculo extends Model
     protected $fillable = [
         "nome",
         "cor",
-        "fabricante",
+        "fabricante_id",
         "ano_fabricacao",
         "ano_modelo",
         "placa",
